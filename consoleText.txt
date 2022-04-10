@@ -1,0 +1,275 @@
+Started by user SmrutiRanjan MOHAPATRA
+Running as SYSTEM
+Building in workspace /var/lib/jenkins/workspace/ATLAS-NEW/OUP-ATLAS-ACS-PIPELINES/ACS-DEPLOYMENT-TO-DEV/OUP-ATLAS-ACS-DEV-BUILD-DEPLOYMENT-TO-EC2
+[WS-CLEANUP] Deleting project workspace...
+[WS-CLEANUP] Deferred wipeout is used...
+[WS-CLEANUP] Done
+Checking for pre-build
+Executing pre-build step
+Checking if email needs to be generated
+No emails were triggered.
+[OUP-ATLAS-ACS-DEV-BUILD-DEPLOYMENT-TO-EC2] $ /bin/sh -xe /tmp/jenkins7763703265493123478.sh
++ sudo /var/lib/jenkins/workspace/scripts/ATLAS-ACS/ATLAS-ACS-DEV-EC2-DEPLOYMENT/ATLAS-ACS-DEV-EC2-DEPLOYMENT.sh
+  
+Running Instances i-0268f33ae4b7166a7  detected for Atlas Dev Env Core Server.
+  
+Doing Target Group Health Check for all Available instances...............................
+ 
+rm: cannot remove ‘unhealthy.txt’: No such file or directory
+rm: cannot remove ‘healthy.txt’: No such file or directory
+Terminating Unahealthy instance first.....
+ 
+{
+    "TerminatingInstances": [
+        {
+            "InstanceId": "i-0268f33ae4b7166a7", 
+            "CurrentState": {
+                "Code": 32, 
+                "Name": "shutting-down"
+            }, 
+            "PreviousState": {
+                "Code": 16, 
+                "Name": "running"
+            }
+        }
+    ]
+}
+Monitoring Instance state.............................................
+  
+ATLAS ACS Dev Core Server instance i-0268f33ae4b7166a7 is now in shutting-down state.
+Please wait untill the state is "terminated".
+  
+ATLAS ACS Dev Core Server instance i-0268f33ae4b7166a7 is now in shutting-down state.
+Please wait untill the state is "terminated".
+  
+ATLAS ACS Dev Core Server instance i-0268f33ae4b7166a7 is now in shutting-down state.
+Please wait untill the state is "terminated".
+  
+ATLAS ACS Dev Core Server with instance id i-0268f33ae4b7166a7 is now terminated.
+    
+checking for the newly provisioned instance.
+New Instance i-025e736b648b07a10 detected for ATLAS ACS Dev Core Server.
+   
+checking the new instance status....................................
+  
+Please wait untill the status is 'running'..................
+  
+ATLAS ACS Dev Core Server with instance id i-025e736b648b07a10 is now running.
+  
+Doing Health Check For the instance in Target Group...............................
+ 
+ATLAS core server Target Group instance i-025e736b648b07a10 Health is in unhealthy
+ATLAS ACS Dev Core Server Target Group instance i-025e736b648b07a10 is now in unhealthy state.
+Please wait untill the state is "healthy".
+  
+ATLAS ACS Dev Core Server Target Group instance i-025e736b648b07a10 is now in unhealthy state.
+Please wait untill the state is "healthy".
+  
+ATLAS ACS Dev Core Server Target Group instance i-025e736b648b07a10 is now in unhealthy state.
+Please wait untill the state is "healthy".
+  
+ATLAS ACS Dev Core Server Target Group instance i-025e736b648b07a10 is now in unhealthy state.
+Please wait untill the state is "healthy".
+  
+ATLAS ACS Dev Core Server Target Group instance i-025e736b648b07a10 is now in unhealthy state.
+Please wait untill the state is "healthy".
+  
+ATLAS ACS Dev Core Server Target Group instance i-025e736b648b07a10 is now in unhealthy state.
+Please wait untill the state is "healthy".
+  
+ATLAS ACS Dev Core Server Target Group instance i-025e736b648b07a10 is now in unhealthy state.
+Please wait untill the state is "healthy".
+  
+ATLAS ACS Dev Core Server Target Group instance i-025e736b648b07a10 is now in unhealthy state.
+Please wait untill the state is "healthy".
+  
+ATLAS ACS Dev Core Server Target Group is now in "healthy" state..
+ 
+Doing Health Check For the Target Group "oup-atlas-dev-shareatlas-tg"...............................
+ 
+ATLAS core server shareatlas Target Group instance i-025e736b648b07a10 Health is in healthy
+ATLAS ACS Dev Core Server Target Group "oup-atlas-dev-shareatlas-tg" instance i-025e736b648b07a10 is now in "healthy" state..
+Proceeding with Termination of the ATLAS ACS Dev Core Server instances.
+ 
+Please Wait..........................................................
+  
+{
+    "TerminatingInstances": [
+        {
+            "InstanceId": "i-0268f33ae4b7166a7", 
+            "CurrentState": {
+                "Code": 48, 
+                "Name": "terminated"
+            }, 
+            "PreviousState": {
+                "Code": 48, 
+                "Name": "terminated"
+            }
+        }
+    ]
+}
+Monitoring Instance state.............................................
+  
+ATLAS ACS Dev Core Server with instance id i-0268f33ae4b7166a7 is now terminated.
+    
+checking for the newly provisioned instance.
+New Instance i-025e736b648b07a10  detected for ATLAS ACS Dev Core Server.
+   
+checking the new instance status....................................
+  
+Please wait untill the status is 'running'..................
+  
+ATLAS ACS Dev Core Server with instance id i-025e736b648b07a10 is now running.
+  
+Doing Health Check For the Target Group...............................
+ 
+ATLAS core server Target Group instance i-025e736b648b07a10 Health is in healthy
+ATLAS ACS Dev Core Server Target Group is now in "healthy" state..
+Terminating rest of the core servers..............
+  
+Terminating the rest instances 
+ 
+  
+monitoring instances until status is "terminated".
+    
+checking for the newly provisioned instance.
+New Instance detected for ATLAS ACS Dev Core Server.
+   
+checking the new instance status....................................
+  
+Please wait untill the status is 'running'..................
+  
+Doing Health Check For the Target Group "oup-atlas-dev-coreatlas-tg"...............................
+ 
+Doing Health Check For the Target Group "oup-atlas-dev-shareatlas-tg"...............................
+ 
+ 
+ 
+Proceeding with ATLAS ACS Solr Index servers Termination process
+ 
+  
+Instances i-0275f77d2fea5b9a1 detected for Atlas Dev Env Solr Index Server.
+  
+ 
+Doing Tag Status Check for all Available instances...............................
+ 
+rm: cannot remove ‘complete1.txt’: No such file or directory
+rm: cannot remove ‘incomplete1.txt’: No such file or directory
+There are no Unhealthy instances detected, Proceeding with regular approach
+Proceeding with Termination of the ATLAS ACS Dev Solr Index Server instances.
+ 
+Please Wait..........................................................
+  
+{
+    "TerminatingInstances": [
+        {
+            "InstanceId": "i-0275f77d2fea5b9a1", 
+            "CurrentState": {
+                "Code": 32, 
+                "Name": "shutting-down"
+            }, 
+            "PreviousState": {
+                "Code": 16, 
+                "Name": "running"
+            }
+        }
+    ]
+}
+Monitoring Instance state.............................................
+  
+ATLAS ACS Dev Solr Index Server is now in shutting-down state.
+Please wait untill the state is "terminated".
+  
+ATLAS ACS Dev Solr Index Server is now in shutting-down state.
+Please wait untill the state is "terminated".
+  
+ATLAS ACS Dev Solr Index Server is now in shutting-down state.
+Please wait untill the state is "terminated".
+  
+ATLAS ACS Dev Solr Index Server with instance id i-0275f77d2fea5b9a1 is now terminated.
+    
+checking for the newly provisioned instance.
+New Instance i-078fd030749ecc0e6 detected for ATLAS ACS Dev Solr Index Server.
+   
+checking the new instance status....................................
+  
+Please wait untill the status is 'running'..................
+  
+ATLAS ACS Solr Index Server with instance id i-078fd030749ecc0e6 is now running.
+  
+  
+Doing Tag Status Check for Newly Generated instance......
+New instance i-078fd030749ecc0e6 Tag 
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in  state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in chef_complete state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in chef_complete state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in chef_complete state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in chef_complete state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in chef_complete state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Restore state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Restore state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Restore state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Restore state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Restore state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+ATLAS ACS Dev Solr Index Server instance i-078fd030749ecc0e6 TAG stats is now in OUP_Backup_Delta state.
+Please wait untill the state is "complete".
+  
+TAG status for instance i-078fd030749ecc0e6 is not in "complete" status since 20 minutes hence exiting..
+  
+Please rerun the deployment job "OUP-ATLAS-ACS-DEV-BUILD-DEPLOYMENT-TO-EC2"......
+Build step 'Execute shell' marked build as failure
+Sending e-mails to: jenkinsadmin.content@oup.com bhargavram.janaswami@oup.com claire.day@oup.com martin.cusworth@oup.com
+Checking for post-build
+Performing post-build step
+Checking if email needs to be generated
+No emails were triggered.
+Finished: FAILURE
